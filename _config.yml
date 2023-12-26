@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Your Name / ShubhangiGarnaik"
+title                    : "Shubhangi Garnaik"
 title_separator          : "-"
 name                     : &name "Shubhangi S.R. Garnaik"
 description              : &description "Masters Student at State University of Newyork, Korea"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Shubhangi Garnaik"
   avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
+  bio              : "Graduate CS Student with a keen interest in AI and ML"
   location         : "Location"
   employer         :
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
