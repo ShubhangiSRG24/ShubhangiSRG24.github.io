@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ArtSpeak: draft summary, key methods, results, and direct access to the paper PDF."
+    />
+    <title>ArtSpeak | Shubhangi S. R. Garnaik</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <div class="page-shell paper-page">
+      <header class="topbar">
+        <a class="brand" href="../../index.html">Shubhangi S. R. Garnaik</a>
+        <nav class="nav-links" aria-label="Project navigation">
+          <a href="../../index.html#papers">Back to portfolio</a>
+          <a href="../../ArtSpeak_ISMAR_submission_Revised_Final.pdf" target="_blank" rel="noreferrer" aria-label="Read the ArtSpeak paper PDF">Paper PDF</a>
+        </nav>
+      </header>
+
+      <main class="project-main">
+        <section class="project-hero-card">
+          <h1>ArtSpeak: An Interactive AR Application for Lifelike Speaking with Art Portraits</h1>
+          <p class="project-venue">Full paper, IEEE International Symposium on Mixed and Augmented Reality (ISMAR), 2025</p>
+          <p class="project-authors">Shubhangi S. R. Garnaik · Aruna Balasubramanian · Niranjan Balasubramanian · Jihoon Ryoo</p>
+          <div class="project-actions">
+            <a href="../../ArtSpeak_ISMAR_submission_Revised_Final.pdf" target="_blank" rel="noreferrer" aria-label="Read the ArtSpeak paper PDF">PDF</a>
+            <a href="https://doi.org/10.1109/ISMAR67309.2025.00091" target="_blank" rel="noreferrer">DOI</a>
+            <a href="../../Artspeakdemo.mp4" target="_blank" rel="noreferrer">Demo</a>
+          </div>
+        </section>
+
+        <section id="overview" class="project-section">
+          <h2>Abstract</h2>
+          <p>
+            Museum visits often lack personalized and interactive experiences. ArtSpeak is a
+            standalone mobile AR application that lets visitors point a camera at an artwork, ask
+            questions, and receive lifelike talking-head responses from the portrait. To avoid the
+            cost of generating video at runtime, the system prepares responses for curated
+            frequently asked questions and retrieves the closest match using GPT-based embeddings
+            and cosine similarity.
+          </p>
+          <p>
+            This retrieval-based approach achieves more than 30× lower latency and approximately
+            81% lower energy use than live video generation. In the user study, 85% of participants
+            rated responses as relevant and 90% reported smooth video playback.
+          </p>
+
+          <figure class="project-figure project-figure-compact">
+            <img src="../../project imageArtspeak.png" alt="Museum visitors using the ArtSpeak mobile application to ask questions of an artwork" />
+            <figcaption>ArtSpeak creates a self-descriptive, conversational museum experience.</figcaption>
+          </figure>
+        </section>
+
+        <section id="system" class="project-section">
+          <h2>System</h2>
+          <div class="project-facts">
+            <article>
+              <h3>Offline setup</h3>
+              <p>Generate FAQ pairs and embeddings, synthesize audio, and pre-render portrait videos with SADTALKER.</p>
+            </article>
+            <article>
+              <h3>Runtime retrieval</h3>
+              <p>Transcribe the visitor’s question, retrieve the closest FAQ, and play the matched response immediately.</p>
+            </article>
+            <article>
+              <h3>Graceful fallback</h3>
+              <p>Use an introductory response and a generated fallback when the curated FAQ set has no suitable match.</p>
+            </article>
+          </div>
+
+          <figure class="project-figure project-figure-compact">
+            <img src="../../Artspeak system.png" alt="ArtSpeak architecture showing offline FAQ and talking-head generation followed by online query retrieval and AR playback" />
+            <figcaption>Offline content preparation and the online mobile AR retrieval flow.</figcaption>
+          </figure>
+        </section>
+
+        <section id="demo" class="project-section">
+          <h2>Demo</h2>
+          <video class="demo-video project-video" controls playsinline preload="metadata" poster="../../ArtSpeak_demo_poster.jpg">
+            <source src="../../Artspeakdemo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </section>
+
+        <section id="citation" class="project-section citation-section">
+          <h2>BibTeX</h2>
+          <pre><code>@INPROCEEDINGS{11220339,
+  author={Garnaik, Shubhangi S. R. and Balasubramanian, Aruna and Balasubramanian, Niranjan and Ryoo, Jihoon},
+  booktitle={2025 IEEE International Symposium on Mixed and Augmented Reality (ISMAR)},
+  title={Artspeak: An Interactive AR Application for Lifelike Speaking with Art Portraits},
+  year={2025},
+  volume={},
+  number={},
+  pages={826-836},
+  keywords={Art;Runtime;Generative AI;Transforms;Museums;Real-time systems;Natural language processing;Augmented reality;Smart phones;Videos;Augmented Reality;Generative AI;Cultural Heritage Interfaces;FAQ Retrieval;Human-Centered AI;Natural Language Interaction;Mobile AR Application},
+  doi={10.1109/ISMAR67309.2025.00091}}</code></pre>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

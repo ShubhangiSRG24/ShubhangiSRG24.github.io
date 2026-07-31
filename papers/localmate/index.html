@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="LocalMate: accepted Interspeech 2026 paper on accent-adaptive voice agents."
+    />
+    <title>LocalMate | Shubhangi S. R. Garnaik</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <div class="page-shell paper-page">
+      <header class="topbar">
+        <a class="brand" href="../../index.html">Shubhangi S. R. Garnaik</a>
+        <nav class="nav-links" aria-label="Project navigation">
+          <a href="../../index.html#papers">Back to portfolio</a>
+          <a href="../../LocalMate.pdf" target="_blank" rel="noreferrer" aria-label="Read the LocalMate paper PDF">Paper PDF</a>
+        </nav>
+      </header>
+
+      <main class="project-main">
+        <section class="project-hero-card">
+          <h1>When Machines Speak Like Local Peers: Improving Conversational Experiences with Accent-Adaptive Voice Agents</h1>
+          <p class="project-venue">Accepted at Interspeech 2026</p>
+          <!-- <p class="project-authors project-status-note">The accepted LocalMate paper is available in this portfolio.</p> -->
+          <div class="project-actions">
+            <a href="../../LocalMate.pdf" target="_blank" rel="noreferrer" aria-label="Read the LocalMate paper PDF">PDF</a>
+            <a href="#overview">Overview</a>
+            <a href="#system">System</a>
+            <a href="#availability">Availability</a>
+          </div>
+        </section>
+
+        <section id="overview" class="project-section">
+          <h2>Abstract</h2>
+          <p>
+            LocalMate is an end-to-end accent-adaptive conversational agent for public airport
+            information. It estimates a speaker’s accent with calibrated confidence, retrieves a
+            grounded answer from a validated FAQ set, and returns accent-conditioned speech with
+            synchronized talking-face video.
+          </p>
+          <p>
+            The system uses a confidence-gated fallback instead of guessing when accent evidence is
+            weak. The study compares baseline U.S. speech, correct adaptation, incorrect
+            adaptation, and neutral fallback to examine how adaptation quality affects confidence,
+            trust, and interaction friction.
+          </p>
+
+          <figure class="project-figure project-figure-compact project-figure-wide">
+            <img src="../../Localmate system.png" alt="LocalMate pipeline from speech transcription and accent classification to FAQ retrieval, accent-conditioned speech, and talking-face video" />
+            <figcaption>Accent estimation, grounded FAQ retrieval, and confidence-aware response generation.</figcaption>
+          </figure>
+        </section>
+
+        <section id="system" class="project-section">
+          <h2>System</h2>
+          <div class="project-facts">
+            <article>
+              <h3>Accent estimation</h3>
+              <p>Use WavLM-Base-Plus with layer-weighted statistics pooling to estimate accent and confidence.</p>
+            </article>
+            <article>
+              <h3>Grounded retrieval</h3>
+              <p>Transcribe the utterance and retrieve the closest answer from a validated airport FAQ set.</p>
+            </article>
+            <article>
+              <h3>Safe realization</h3>
+              <p>Generate accent-conditioned speech and talking-face video, with neutral speech when confidence is low.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="project-section">
+          <h2>Study framing</h2>
+          <div class="project-facts">
+            <article>
+              <h3>Baseline voice</h3>
+              <p>Compare against a fixed U.S. English output to measure the value of adaptation itself.</p>
+            </article>
+            <article>
+              <h3>Correct adaptation</h3>
+              <p>Test whether matching accent-conditioned synthesis improves confidence, trust, and perceived ease.</p>
+            </article>
+            <article>
+              <h3>Fallback behavior</h3>
+              <p>Use a neutral response path when accent evidence is weak rather than risking an incorrect adaptation.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="availability" class="project-section citation-section">
+          <h2>Paper availability</h2>
+          <div class="citation-notice">
+            The LocalMate paper is available directly from this portfolio as
+            <a href="../../LocalMate.pdf" target="_blank" rel="noreferrer">LocalMate.pdf</a>.
+            This work has been accepted at Interspeech 2026. The portfolio currently links the
+            accepted paper PDF directly.
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </body>
+</html>
