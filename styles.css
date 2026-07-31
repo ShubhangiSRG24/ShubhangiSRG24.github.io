@@ -286,10 +286,13 @@ h1 {
   position: relative;
   align-items: center;
   justify-content: center;
-  gap: 7px;
-  width: auto;
-  min-height: 40px;
-  padding: 0 12px;
+  width: 44px;
+  height: 44px;
+  min-height: 44px;
+  padding: 0;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(43, 77, 71, 0.1);
   transition:
     transform 160ms ease,
     color 160ms ease,
@@ -302,58 +305,57 @@ h1 {
   transform: translateY(-2px);
 }
 
-.profile-links a[href$=".pdf"] {
-  color: #c33f4a;
-  background: #fff0f1;
-  border-color: rgba(195, 63, 74, 0.18);
-}
-
-.profile-links a[href^="mailto:"] {
-  color: #b45b00;
-  background: #fff5e8;
-  border-color: rgba(180, 91, 0, 0.2);
-}
-
-.profile-links a[href*="scholar.google"] {
-  color: #2f6fc2;
-  background: #edf5ff;
-  border-color: rgba(47, 111, 194, 0.2);
-}
-
-.profile-links a[href*="github.com"] {
-  color: #24292f;
-  background: #f1f3f5;
-  border-color: rgba(36, 41, 47, 0.16);
-}
-
-.profile-links a[href*="linkedin.com"] {
-  color: #0a66c2;
-  background: #eaf5ff;
-  border-color: rgba(10, 102, 194, 0.2);
-}
-
 .profile-links svg {
   flex: 0 0 auto;
-  width: 19px;
-  height: 19px;
+  width: 23px;
+  height: 23px;
   fill: none;
-  stroke: currentColor;
-  stroke-width: 1.8;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
-.profile-links .icon-fill {
-  fill: currentColor;
-  stroke: none;
+.profile-links a::after {
+  display: none;
 }
 
-.profile-link-label {
-  color: inherit;
-  font-size: 0.76rem;
-  font-weight: 800;
-  line-height: 1;
-  white-space: nowrap;
+.email-mark {
+  fill: none;
+  stroke: #ea4335;
+  stroke-width: 1.9;
+}
+
+.scholar-bg {
+  fill: #4285f4;
+}
+
+.scholar-cap {
+  fill: #fff;
+}
+
+.scholar-detail {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.35;
+}
+
+.github-mark {
+  fill: #24292f;
+}
+
+.linkedin-bg {
+  fill: #0a66c2;
+}
+
+.linkedin-mark {
+  fill: #fff;
+}
+
+.pdf-page,
+.pdf-fold,
+.pdf-mark {
+  fill: none;
+  stroke: #d9363e;
+  stroke-width: 1.65;
 }
 
 .reference-links a::after,
@@ -1307,12 +1309,9 @@ h1 {
   }
 
   .profile-links a {
-    min-height: 38px;
-    padding: 0 10px;
-  }
-
-  .profile-link-label {
-    font-size: 0.7rem;
+    width: 42px;
+    height: 42px;
+    min-height: 42px;
   }
 
   .hero {
