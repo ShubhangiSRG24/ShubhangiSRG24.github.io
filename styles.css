@@ -207,8 +207,6 @@ h1 {
 
 .hero-profile-content {
   width: 100%;
-  padding-top: 24px;
-  border-top: 1px solid rgba(43, 77, 71, 0.08);
 }
 
 .hero-actions,
@@ -318,10 +316,28 @@ h1 {
   display: none;
 }
 
-.email-mark {
+.gmail-blue,
+.gmail-red,
+.gmail-green,
+.gmail-yellow {
   fill: none;
+  stroke-width: 2.65;
+}
+
+.gmail-blue {
+  stroke: #4285f4;
+}
+
+.gmail-red {
   stroke: #ea4335;
-  stroke-width: 1.9;
+}
+
+.gmail-green {
+  stroke: #34a853;
+}
+
+.gmail-yellow {
+  stroke: #fbbc04;
 }
 
 .scholar-bg {
@@ -354,7 +370,7 @@ h1 {
 .pdf-fold,
 .pdf-mark {
   fill: none;
-  stroke: #d9363e;
+  stroke: #52645f;
   stroke-width: 1.65;
 }
 
@@ -393,47 +409,30 @@ h1 {
 }
 
 .profile-panel-about {
-  display: grid;
-  grid-template-columns: minmax(190px, 0.34fr) minmax(0, 1fr) minmax(0, 1fr);
-  column-gap: 28px;
-  align-items: start;
-}
-
-.profile-panel-heading {
-  grid-column: 1;
-}
-
-.profile-panel-heading .profile-label {
-  margin-bottom: 8px;
-}
-
-.profile-panel-heading h2 {
-  margin-bottom: 0;
-  font-family: "Fraunces", Georgia, serif;
-  font-size: clamp(1.45rem, 2.5vw, 1.85rem);
-  line-height: 1.15;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .profile-panel-about p:not(.profile-label) {
   margin: 0;
   color: var(--muted);
-  font-size: 0.94rem;
-  line-height: 1.65;
+  font-size: 0.98rem;
+  line-height: 1.72;
+}
+
+.profile-panel-about p:not(.profile-label) + p {
+  margin-top: 12px;
 }
 
 .profile-current-work {
-  padding-top: 22px;
-  margin-top: 22px;
-  border-top: 1px solid var(--line);
+  padding-top: 12px;
+  margin-top: 20px;
 }
 
 .current-work-heading {
   margin-bottom: 18px;
   text-align: center;
-}
-
-.current-work-heading .profile-label {
-  margin-bottom: 6px;
 }
 
 .current-work-heading h2 {
@@ -1221,14 +1220,6 @@ h1 {
     grid-template-columns: 1fr;
   }
 
-  .profile-panel-about {
-    grid-template-columns: minmax(170px, 0.45fr) minmax(0, 1fr);
-  }
-
-  .profile-panel-about p:not(.profile-label) {
-    grid-column: 2;
-  }
-
   .publication-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1320,10 +1311,6 @@ h1 {
 
   .profile-panel-about {
     display: block;
-  }
-
-  .profile-panel-about h2 {
-    margin-bottom: 16px;
   }
 
   .profile-panel-about p:not(.profile-label) + p {
