@@ -193,8 +193,9 @@ h1 {
 .hero-kicker {
   margin: 0 0 6px;
   color: #647e79;
+  font-family: "Fraunces", Georgia, serif;
   font-size: 1.06rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.4;
 }
 
@@ -682,8 +683,9 @@ h1 {
 .publication-venue {
   margin-bottom: 10px;
   color: var(--accent-dark);
+  font-family: "Fraunces", Georgia, serif;
   font-size: 0.74rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.11em;
   text-transform: uppercase;
 }
