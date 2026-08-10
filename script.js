@@ -14,6 +14,37 @@ if (menuToggle && navLinks) {
   });
 }
 
+const youtubeEmbeds = document.querySelectorAll(".youtube-embed[data-youtube-id]");
+
+youtubeEmbeds.forEach((container) => {
+  const videoId = container.dataset.youtubeId;
+  const startTime = container.dataset.youtubeStart || "0";
+
+  // YouTube now requires an HTTP Referer or equivalent client identity. Keep the
+  // linked thumbnail when the portfolio is opened directly as a local file.
+  if (!videoId || !["http:", "https:"].includes(window.location.protocol)) {
+    return;
+  }
+
+  const playerUrl = new URL(`https://www.youtube.com/embed/${videoId}`);
+  playerUrl.searchParams.set("start", startTime);
+  playerUrl.searchParams.set("playsinline", "1");
+  playerUrl.searchParams.set("enablejsapi", "1");
+  playerUrl.searchParams.set("origin", window.location.origin);
+  playerUrl.searchParams.set("widget_referrer", window.location.href.split("#")[0]);
+
+  const iframe = document.createElement("iframe");
+  iframe.src = playerUrl.toString();
+  iframe.title = "Research presentation by Shubhangi S. R. Garnaik";
+  iframe.loading = "lazy";
+  iframe.allow =
+    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+  iframe.referrerPolicy = "strict-origin-when-cross-origin";
+  iframe.allowFullscreen = true;
+
+  container.replaceChildren(iframe);
+});
+
 const revealElements = document.querySelectorAll(".reveal");
 
 if (revealElements.length > 0) {
